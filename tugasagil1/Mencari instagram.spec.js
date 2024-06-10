@@ -11,6 +11,12 @@ test('Mencari akun Instagram dan mengambil screenshot postingan pertama', async 
     fs.mkdirSync(screenshotDir, { recursive: true });
   }
 
+   // Set viewport dan skala agar sesuai dengan zoom 100%
+   await page.setViewportSize({ width: 1920, height: 1080 });
+   await page.evaluate(() => {
+     document.body.style.zoom = "100%";
+   });
+
   // Buka situs Instagram
   await page.goto('https://www.instagram.com/', { waitUntil: 'networkidle' });
 
@@ -28,10 +34,12 @@ test('Mencari akun Instagram dan mengambil screenshot postingan pertama', async 
   // Beri jeda untuk memastikan halaman sepenuhnya dimuat
   await page.waitForTimeout(3000);
 
-  // Buka halaman profil pengguna
-  await page.goto('https://www.instagram.com/alwiassegaf03/');
-  /*// Tunggu hingga postingan pertama muncul
-  await page.waitForSelector('article > div img');*/
+  //pergi kehalaman pencarian
+  await page.getByRole('link', { name: 'Search Search' }).click();
+  await page.waitForTimeout(3000);
+  await page.getByPlaceholder('Search').fill('alwi');
+  await page.waitForTimeout(3000);
+  await page.getByRole('link', { name: 'alwiassegaf03\'s profile picture alwiassegaf03 Verified ALWI ASSEGAF OFFICIAL' }).click();
 
   // Pilih postingan pertama
   await page.goto('https://www.instagram.com/p/C78Xn_wvcIt/');
@@ -40,7 +48,6 @@ test('Mencari akun Instagram dan mengambil screenshot postingan pertama', async 
 
   // Ambil screenshot dari postingan pertama
   const screenshotPath = path.join(screenshotDir, 'first_post.png');
-  await page.screenshot({ path: screenshotPath, fullPage: true });
-
+  await page.screenshot({ path: screenshotPath});
   console.log(`Screenshot berhasil diambil: ${screenshotPath}`);
 });

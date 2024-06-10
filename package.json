@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "playwright": "^1.44.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2"
+  },
+  "scripts": {},
+  "name": "tugas",
+  "version": "1.0.0",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

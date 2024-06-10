@@ -1,0 +1,55 @@
+{
+    "_id": 11,
+    "name": "keyboard gaming",
+    "category": "keyboard",
+    "harga": 480000,
+    "rating":3.4,
+    "link": "http://agil.com/keyboard-gaming"
+  }
+  
+  {
+    "_id": 12,
+    "name": "keyboard gaming",
+    "category": "keyboard",
+    "harga": 3800000,
+    "rating":3.5,
+    "link": "http://agil.com/keyboard-gaming"
+  }
+
+  {
+    "_id": 13,
+    "name": "keyboard asus",
+    "category": "keyboard",
+    "harga": 3700000,
+    "rating": 5.0,
+    "link": "http://agil.com/keyboard-gaming"
+  }
+
+  {
+    "_id": 14,
+    "name": "keyboard biasa",
+    "category": "keyboard",
+    "harga": 200000,
+    "rating": 2.3,
+    "link": "http://agil.com/keyboard-biasa"
+  }
+  
+  {
+    "_id": 15,
+    "name": "keyboard biasa",
+    "category": "keyboard",
+    "harga": 200010,
+    "rating": 4.8,
+    "link": "http://agil.com/keyboard-biasa"
+  }
+
+  {
+    "_id": 16,
+    "name": "keyboard asus",
+    "category": "keyboard",
+    "harga": 2012133,
+    "rating": 4.3,
+    "link": "http://agil.com/keyboard-biasa"
+  }
+
+  

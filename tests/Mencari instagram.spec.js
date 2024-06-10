@@ -19,7 +19,7 @@ test('Mencari akun Instagram dan mengambil screenshot postingan pertama', async 
   await page.goto('https://www.instagram.com/alwiassegaf03/', { waitUntil: 'networkidle' });
 
   // Tunggu hingga postingan pertama muncul
-  await page.waitForSelector('article > div img');
+  /*await page.waitForSelector('article > div img');*/
 
   // Pilih postingan pertama
   const firstPost = await page.$('article > div img');
